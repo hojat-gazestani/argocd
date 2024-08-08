@@ -2,17 +2,17 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: nginx
-  name: nginx
+    role: frontend
+  name: frontend
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: nginx
+      role: frontend
   template:
     metadata:
       labels:
-        app: nginx
+        role: frontend
     spec:
       containers:
       - image: nginx
